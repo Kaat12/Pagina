@@ -12,11 +12,11 @@ db = SQLAlchemy(app)
 
 class clientes(db.Model):
     idCliente= db.Column(db.Integer, primary_key=True)
-    Dni = db.Column(db.String(80))
-    Nombres = db.Column(db.String(80))
+    dni = db.Column(db.String(80))
+    dombres = db.Column(db.String(80))
     email = db.Column(db.String(120), unique=True)
     password = db.Column(db.String(80))
-    Direccion = db.column(db.String(80))
+    direccion = db.column(db.String(80))
 
 db.create_all()
 #RUTAS DEl WEB APP---------------------------------------------------------------------------------------------------------
@@ -40,6 +40,26 @@ def login():
             error = 'Usuario o contraseña incorrectos'
             return render_template('login.html', error=error)
     return render_template('login.html')
+
+@app.route('/registro')
+def registro():
+    return render_template('registro.html')
+@app.route('/ofertas')
+def ofertas():
+    return render_template('ofertas.html')
+@app.route('/dama')
+def dama():
+    return render_template('dama.html')
+@app.route('/rebajas')
+def rebajas():
+    return render_template('rebajas.html')
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')
+@app.route('/new')
+def new():
+    return render_template('new_post.html')
+
 
 @app.route('/logout')
 def logout():
