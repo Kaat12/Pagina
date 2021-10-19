@@ -1,5 +1,6 @@
 from flask import request, Response, Flask, render_template, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
+import werkzeug.security 
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/bd_ventas'
