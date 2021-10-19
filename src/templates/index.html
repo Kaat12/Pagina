@@ -1,226 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>FASHION STORE</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Course Project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/bootstrap4/bootstrap.min.css')}}">
-<link href="{{url_for('static', filename='style/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/plugins/OwlCarousel2-2.2.1/animate.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/main_styles.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/responsive.css')}}">
-</head>
-<body>
-
-	<div class="super_container">
-		<label for="start">FECHA:</label> <input type="date" id="start" 
-		name="trip-start" value="2021-10-06" min="2018-01-01" max="2030-12-31">
-<div class="super_container">
-	<!-- Header -->
-
-	<header class="header d-flex flex-row">
-		<div class="header_content d-flex flex-row align-items-center">
-			<!-- Logo -->
-			<div class="">
-				<div class="logo">
-					<img src="" alt="">
-					<span>Fashion Store</span>
+{% extends "layout.html "%}
+{% block content %}
+<!-- Home -->
+<div class="home">
+	<!-- Hero Slider -->
+	<div class="hero_slider_container">
+		<div class="hero_slider owl-carousel">
+			<!-- Hero Slide -->
+			<div class="hero_slide">
+				<div class="hero_slide_background" style="background-image:url({{url_for('static', filename='images/bac-fas.png')}})"></div>
+				<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+					<div class="hero_slide_content text-center">
+						<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Otoño,<span>Invierno</span> Ofertas!</h1>
+					</div>
 				</div>
 			</div>
-
-			<!-- Main Navigation -->
-			<nav class="main_nav_container">
-				<div class="main_nav">
-					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="#">Ofertas</a></li>
-						<li class="main_nav_item"><a href="/dama">Dama</a></li>
-						<li class="main_nav_item"><a href="news.html">+ Rebajas</a></li>
-						<li class="main_nav_item"><a href="contact.html">contacto</a></li>
-						<li class="main_nav_item"><a href="/logout">Cerrar Sesión</a></li>
-					</ul>
+			<!-- Hero Slide -->
+			<div class="hero_slide">
+				<div class="hero_slide_background" style="background-image:url({{url_for('static', filename='images/bac-fas.png')}})"></div>
+				<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+					<div class="hero_slide_content text-center">
+						<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Las<span>Mejores Prendas y Ofertas</span> Solo Aqui Las Encontrarás!</h1>
+					</div>
 				</div>
-			</nav>
-		</div>
-		<div class="header_side d-flex flex-row justify-content-center align-items-center">
-			<img src="{{url_for('static', filename='images/phone-call.svg')}}" alt="">
-			<span>+42 578 902 902</span>
-		</div>
-
-		<!-- Hamburger -->
-		<div class="hamburger_container">
-			<i class="fas fa-bars trans_200"></i>
-		</div>
-
-	</header>
-	
-	<!-- Menu -->
-	<div class="menu_container menu_mm">
-
-		<!-- Menu Close Button -->
-		<div class="menu_close_container">
-			<div class="menu_close"></div>
-		</div>
-
-		<!-- Menu Items -->
-		<div class="menu_inner menu_mm">
-			<div class="menu menu_mm">
-				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="#">Ofertas</a></li>
-					<li class="menu_item menu_mm"><a href="courses.html">Dama</a></li>
-					<li class="menu_item menu_mm"><a href="news.html">+ Rebajas</a></li>
-					<li class="menu_item menu_mm"><a href="contact.html">contacto</a></li>
-				</ul>
-
-				<!-- Menu Social -->
-				
-				<div class="menu_social_container menu_mm">
-					<ul class="menu_social menu_mm">
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
-					</ul>
-				</div>
-
-				<div class="menu_copyright menu_mm">FashionStore All rights reserved</div>
 			</div>
-
+			<!-- Hero Slide -->
+			<div class="hero_slide">
+				<div class="hero_slide_background" style="background-image:url({{url_for('static', filename='images/bac-fas.png')}})"></div>
+				<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+					<div class="hero_slide_content text-center">
+						<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Rebajas<span>Todos</span> Los Dias</h1>
+					</div>
+				</div>
+			</div>
 		</div>
-
+		<div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200">prev</span></div>
+		<div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200">next</span></div>
 	</div>
-	
-	<!-- Home -->
-
-	<div class="home">
-
-		<!-- Hero Slider -->
-		<div class="hero_slider_container">
-			<div class="hero_slider owl-carousel">
-				
-				<!-- Hero Slide -->
-				<div class="hero_slide">
-					<div class="hero_slide_background" style="background-image:url({{url_for('static', filename='images/bac-fas.png')}})"></div>
-					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-						<div class="hero_slide_content text-center">
-							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Otoño,<span>Invierno</span> Ofertas!</h1>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Hero Slide -->
-				<div class="hero_slide">
-					<div class="hero_slide_background" style="background-image:url({{url_for('static', filename='images/bac-fas.png')}})"></div>
-					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-						<div class="hero_slide_content text-center">
-							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Las<span>Mejores Prendas y Ofertas</span> Solo Aqui Las Encontrarás!</h1>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Hero Slide -->
-				<div class="hero_slide">
-					<div class="hero_slide_background" style="background-image:url({{url_for('static', filename='images/bac-fas.png')}})"></div>
-					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-						<div class="hero_slide_content text-center">
-							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Rebajas<span>Todos</span> Los Dias</h1>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200">prev</span></div>
-			<div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200">next</span></div>
-		</div>
-
-	</div>
-
-	<div class="hero_boxes">
-		<div class="hero_boxes_inner">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-lg-4 hero_box_col">
-						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
-							<img src="{{url_for('static', filename='images/store.svg')}}" class="svg" alt="">
-							<div class="hero_box_content">
-								<h2 class="hero_box_title">Tienda en Linea</h2>
-								<a href="courses.html" class="hero_box_link">ver más</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 hero_box_col">
-						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
-							<img src="{{url_for('static', filename='images/oferta.svg')}}" class="svg" alt="">
-							<div class="hero_box_content">
-								<h2 class="hero_box_title">Ofertas Del DÍa</h2>
-								<a href="courses.html" class="hero_box_link">ver más</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 hero_box_col">
-						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
-							<img src="{{url_for('static', filename='images/tienda-fisica.svg')}}" class="svg" alt="">
-							<div class="hero_box_content">
-								<h2 class="hero_box_title">Tiendas Fisicas</h2>
-								<a href="teachers.html" class="hero_box_link">ver más</a>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Popular -->
-
-	<div class="popular page_section">
+</div>
+<div class="hero_boxes">
+	<div class="hero_boxes_inner">
 		<div class="container">
 			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>Nuevas Tendencias</h1>
+				<div class="col-lg-4 hero_box_col">
+					<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+						<img src="{{url_for('static', filename='images/store.svg')}}" class="svg" alt="">
+						<div class="hero_box_content">
+							<h2 class="hero_box_title">Tienda en Linea</h2>
+							<a href="/dama" class="hero_box_link">ver más</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 hero_box_col">
+					<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+						<img src="{{url_for('static', filename='images/oferta.svg')}}" class="svg" alt="">
+						<div class="hero_box_content">
+							<h2 class="hero_box_title">Ofertas Del DÍa</h2>
+							<a href="/dama" class="hero_box_link">ver más</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 hero_box_col">
+					<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+						<img src="{{url_for('static', filename='images/tienda-fisica.svg')}}" class="svg" alt="">
+						<div class="hero_box_content">
+							<h2 class="hero_box_title">Tiendas Fisicas</h2>
+							<a href="#" class="hero_box_link">ver más</a>
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="row course_boxes">
-				
-				<!-- Popular Course Item -->
-				<div class="col-lg-5 course_box">
-					<div class="card">
-						<img class="card-img-top" src="{{url_for('static', filename='images/jeans.jpg')}}" alt="">
-						<div class="card-body text-center">
-							<div class="card-title"><a href="courses.html">Ripped Jeans</a></div>
-							<div class="card-text">Tallas, marcas, variedad de colores, etc...</div>
+		</div>
+	</div>
+</div>
+<!-- Popular -->
+<div class="popular page_section">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="section_title text-center">
+					<h1>Nuevas Tendencias</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row course_boxes">
+			<!-- Popular Course Item -->
+			<div class="col-lg-5 course_box">
+				<div class="card">
+					<img class="card-img-top" src="{{url_for('static', filename='images/jeans.jpg')}}" alt="">
+					<div class="card-body text-center">
+						<div class="card-title"><a href="courses.html">Ripped Jeans</a></div>
+						<div class="card-text">Tallas, marcas, variedad de colores, etc...</div>
+					</div>
+					<div class="price_box d-flex flex-row align-items-center">
+						<div class="course_author_image">
+							<img src="" alt="">
 						</div>
-						<div class="price_box d-flex flex-row align-items-center">
-							<div class="course_author_image">
-								<img src="" alt="">
-							</div>
-							<div class="course_author_name"> Precio, <span> Desde </span></div>
-							<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$250</span></div>
-						</div>
+						<div class="course_author_name"> Precio, <span> Desde </span></div>
+						<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$250</span></div>
 					</div>
 				</div>
-
-	
-				<!-- Popular Course Item -->
-				<div class="col-lg-5 course_box">
-					<div class="card">
-						<img class="card-img-top" src="{{url_for('static', filename='images/sueter.jpg')}}" alt="">
-						<div class="card-body text-center">
-							<div class="card-title"><a href="courses.html">Autumn Colección</a></div>
-							<div class="card-text">Pantalones, Buffandas, Gorros, etc.../div>
-						</div>
+			</div>
+			<!-- Popular Course Item -->
+			<div class="col-lg-5 course_box">
+				<div class="card">
+					<img class="card-img-top" src="{{url_for('static', filename='images/sueter.jpg')}}" alt="">
+					<div class="card-body text-center">
+						<div class="card-title"><a href="courses.html">Autumn Colección</a></div>
+						<div class="card-text">Pantalones, Buffandas, Gorros, etc.../div></div>
 						<div class="price_box d-flex flex-row align-items-center">
 							<div class="course_author_image">
 								<img src="" alt="">
@@ -233,383 +119,186 @@
 			</div>
 		</div>		
 	</div>
-
-
-	<!-- Register -->
-
-	<div class="register">
-
-		<div class="container-fluid">
-			
-			<div class="row row-eq-height">
-				<div class="col-lg-6 nopadding">
-					
-					<!-- Register -->
-
-					<div class="register_section d-flex flex-column align-items-center justify-content-center">
-						<div class="register_content text-center">
-							<h1 class="register_title">Puedes registrarte ahora para obtener el <span>30%</span> de descuento en tus proximas compras</h1>
-							<p class="register_text">Para obtener los siguientes beneficios te recomdamos registrarte y poder hacer tus compras electronicas.</p>
-							<div class="button button_1 register_button mx-auto trans_200"><a href="#">Registrate ahora</a></div>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="col-lg-6 nopadding">
-					
-					<!-- Search -->
-
-					<div class="search_section d-flex flex-column align-items-center justify-content-center">
-						<div class="search_content text-center">
-							<h1 class="search_title">Busca cualquier prenda </h1>
-							<form id="search_form" class="search_form" action="post">
-								<input id="search_form_name" class="input_field search_form_name" type="text" placeholder="Nombre de la prenda" required="required" data-error="Se requiere en nombre de la prenda">
-								<input id="search_form_category" class="input_field search_form_category" type="text" placeholder="Tipo de prenda">
-								<input id="search_form_degree" class="input_field search_form_degree" type="text" placeholder="Hombre o Dama">
-								<button id="search_submit_button" type="submit" class="search_submit_button trans_200" value="Submit">Buscar prenda </button>
-							</form>
-						</div> 
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Services -->
-
-	<div class="services page_section">
-		
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>Otros Beneficios Que Ofrecemos</h1>
-					</div>
-				</div>
-			</div>
-
-			<div class="row services_row">
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="{{url_for('static', filename='images/carro.svg')}}" alt="">
-					</div>
-					<h3>Envios a domicilio</h3>
-					<p>El envío es gratuito si tu compra es mayor de $1000 M.N + IVA dentro de méxico</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="{{url_for('static', filename='images/home.svg')}}" alt="">
-					</div>
-					<h3>Tu paquete llega hasta la puerta de su casa</h3>
-					<p>Garantizamos que su compra llegará hasta la puerta de su hogar</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="{{url_for('static', filename='images/sorpresa.svg')}}" alt="">
-					</div>
-					<h3>Envios sorpresa</h3>
-					<p>En la compra de arriba de $1000 M.N, aparte del envío gratis, se le envía un regalo sorpresa</p>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Testimonials -->
-
-	<div class="testimonials page_section">
-		<!-- <div class="testimonials_background" style="background-image:url(images/testimonials_background.jpg)"></div> -->
-		<div class="testimonials_background_container prlx_parent">
-			<div class="testimonials_background prlx" style="background-image: url({{url_for('static', filename='images/fash.png')}})"></div>
-		</div>
-		<div class="container">
-
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>Lo que dicen nuestros clientes</h1>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					
-					<div class="testimonials_slider_container">
-
-						<!-- Testimonials Slider -->
-						<div class="owl-carousel owl-theme testimonials_slider">
-							
-							<!-- Testimonials Item -->
-							<div class="owl-item">
-								<div class="testimonials_item text-center">
-									<div class="quote">“</div>
-									<p class="testimonials_text">Excelente servicio, mi compra llego en excelentes condiciones y hasta la puerta de mi casa.</p>
-									<div class="testimonial_user">
-										<div class="testimonial_image mx-auto">
-											<img src="{{url_for('static', filename='images/mujer-sonriendo.jpg')}}" alt="">
-										</div>
-										<div class="testimonial_name">Elizabeth Gomez</div>
-										<div class="testimonial_title">Cliente</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Testimonials Item -->
-							<div class="owl-item">
-								<div class="testimonials_item text-center">
-									<div class="quote">“</div>
-									<p class="testimonials_text"> Mi paquete llego en el tiempo acordado y en buenas condiciones </p>
-										<div class="testimonial_image mx-auto">
-											<img src="{{url_for('static', filename='images/teacher_2.jpg')}}" alt="">
-										</div>
-										<div class="testimonial_name">Jaime Peréz</div>
-										<div class="testimonial_title">cliente</div>
-									</div>
-								</div>
-							</div>
-
-					
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<!-- Events -->
-
-	<div class="events page_section">
-		<div class="container">
-			
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>Proximos Eventos</h1>
-					</div>
-				</div>
-			</div>
-			
-			<div class="event_items">
-
-				<!-- Event Item -->
-				<div class="row event_item">
-					<div class="col">
-						<div class="row d-flex flex-row align-items-end">
-
-							<div class="col-lg-2 order-lg-1 order-2">
-								<div class="event_date d-flex flex-column align-items-center justify-content-center">
-									<div class="event_day">03</div>
-									<div class="event_month">Octubre</div>
-								</div>
-							</div>
-
-							<div class="col-lg-4 order-lg-2 order-3">
-								<div class="event_content">
-									<div class="event_name"><a class="trans_200" href="#">GIVEAWAY</a></div>
-									<div class="event_location">Autumn</div>
-									<p>Será el sorteo de un sueter de la nueva coleccion de Autumn</p>
-								</div>
-							</div>
-
-							<div class="col-lg-3 order-lg-2 order-2">
-								<div class="event_image">
-									<img src="{{url_for('static', filename='images/sueter.jpg')}}" alt="">
-								</div>
-							</div>
-
-						</div>	
-					</div>
-				</div>
-
-				<!-- Event Item -->
-				<div class="row event_item">
-					<div class="col">
-						<div class="row d-flex flex-row align-items-end">
-
-							<div class="col-lg-6 order-lg-2 order-2">
-								<div class="event_date d-flex flex-column align-items-center justify-content-center">
-									<div class="event_day">07</div>
-									<div class="event_month">Octubre</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 order-lg-2 order-3">
-								<div class="event_content">
-									<div class="event_name"><a class="trans_200" href="#">Presentación de nuevas coleciones</a></div>
-									<div class="event_location">Tienda Fisica</div>
-									<p>El evento será de gran importancia ya que los diseñadores motran sus nuevas colecciones.</p>
-
-							<div class="col-lg-8 order-lg-2 order-2">
-								<div class="event_image">
-									<img src="{{url_for('static', filename='images/pasarela1.jpg')}}" alt="">
-								</div>
-							</div>
-
-						</div>	
-					</div>
-				</div>
-
-
-			</div>
-				
-		</div>
-	</div>
-
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="container">
-			
-			<!-- Newsletter -->
-
-			<div class="newsletter">
-				<div class="row">
-					<div class="col">
-						<div class="section_title text-center">
-							<h1>Suscribete a nuestra pagina, para recibir nuestras mejores ofertas</h1>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col text-center">
-						<div class="newsletter_form_container mx-auto">
-							<form action="post">
-								<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-									<input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
-									<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribirse</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<!-- Footer Content -->
-
-			<div class="footer_content">
-				<div class="row">
-
-					<!-- Footer Column - About -->
-					<div class="col-lg-3 footer_col">
-
-						<!-- Logo -->
-						<div class="logo_container">
-							<div class="logo">
-								<img src="" alt="">
-								<span>FASHION STORE</span>
-							</div>
-						</div>
-
-						<p class="footer_about_text"> </p>
-
-					</div>
-
-					<!-- Footer Column - Menu -->
-
-					<div class="col-lg-3 footer_col">
-						<div class="footer_column_title">Contenido
-						</div>
-						<div class="footer_column_content">
-							<ul>
-								<li class="footer_list_item"><a href="#">Ofertas</a></li>
-								<li class="footer_list_item"><a href="/dama">Dama</a></li>
-								<li class="footer_list_item"><a href="/rebajas">+Rebajas</a></li>
-								<li class="footer_list_item"><a href="/contacto">contacto</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<!-- Footer Column - Usefull Links 
-
-					<div class="col-lg-3 footer_col">
-						<div class="footer_column_title">Usefull Links</div>
-						<div class="footer_column_content">
-							<ul>
-								<li class="footer_list_item"><a href="#">Testimonials</a></li>
-								<li class="footer_list_item"><a href="#">FAQ</a></li>
-								<li class="footer_list_item"><a href="#">Community</a></li>
-								<li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-								<li class="footer_list_item"><a href="#">Tuitions</a></li>
-							</ul>
-						</div>
-					</div>-->
-
-					<!-- Footer Column - Contact -->
-
-					<div class="col-lg-3 footer_col">
-						<div class="footer_column_title">Contacto</div>
-						<div class="footer_column_content">
-							<ul>
-								<li class="footer_contact_item">
-									<div class="footer_contact_icon">
-										<img src="{{url_for('static', filename='images/placeholder.svg')}}" alt="https://www.flaticon.com/authors/lucy-g">
-									</div>
-									Lomas de san luis, 256, San luis potosi
-								</li>
-								<li class="footer_contact_item">
-									<div class="footer_contact_icon">
-										<img src="{{url_for('static', filename='images/smartphone.svg')}}" alt="https://www.flaticon.com/authors/lucy-g">
-									</div>
-									+42 578 902 902
-								</li>
-								<li class="footer_contact_item">
-									<div class="footer_contact_icon">
-										<img src="{{url_for('static', filename='images/envelope.svg')}}" alt="https://www.flaticon.com/authors/lucy-g">
-									</div>FashionStore@gmail.com
-								</li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-			<!-- Footer Copyright -->
-
-			<div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
-				<div class="footer_copyright">
-					<span>Fashion Store All rights reserved</span>
-				</div>
-				
-				<div class="footer_social ml-sm-auto">
-					<ul class="menu_social">
-						<li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-						<li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-						<li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-						<li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-					</ul>
-				</div>
-			</div>
-
-		</div>
-	</footer>
-
 </div>
-
-<script src="{{url_for('static',filename='js/jquery-3.2.1.min.js')}}"></script>
-<script src="{{url_for('static',filename='style/bootstrap4/popper.js')}}"></script>
-<script src="{{url_for('static',filename='style/bootstrap4/bootstrap.min.js')}}"></script>
-<script src="{{url_for('static',filename='js/plugins/greensock/TweenMax.min.js')}}"></script>
-<script src="{{url_for('static',filename='js/plugins/greensock/TimelineMax.min.js')}}"></script>
-<script src="{{url_for('static',filename='js/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
-<script src="{{url_for('static',filename='js/plugins/greensock/animation.gsap.min.js')}}"></script>
-<script src="{{url_for('static',filename='js/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
-<script src="{{url_for('static',filename='js/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
-<script src="{{url_for('static',filename='js/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
-<script src="{{url_for('static',filename='js/plugins/easing/easing.js')}}"></script>
-<script src="{{url_for('static',filename='js/custom.js')}}"></script>
-
-</body>
-</html>
+<!-- Register -->
+<div class="register">
+	<div class="container-fluid">
+		<div class="row row-eq-height">
+			<!-- Register -->
+			<div class="col-lg-6 nopadding">
+				<div class="register_section d-flex flex-column align-items-center justify-content-center">
+					<div class="register_content text-center">
+						<h1 class="register_title">Puedes registrarte ahora para obtener el <span>30%</span> de descuento en tus proximas compras</h1>
+						<p class="register_text">Para obtener los siguientes beneficios te recomdamos registrarte y poder hacer tus compras electronicas.</p>
+						<div class="button button_1 register_button mx-auto trans_200"><a href="#">Registrate ahora</a></div>
+					</div>
+				</div>
+			</div>
+			<!-- Search -->
+			<div class="col-lg-6 nopadding">
+				<div class="search_section d-flex flex-column align-items-center justify-content-center">
+					<div class="search_content text-center">
+						<h1 class="search_title">Busca cualquier prenda </h1>
+						<form id="search_form" class="search_form" action="post">
+							<input id="search_form_name" class="input_field search_form_name" type="text" placeholder="Nombre de la prenda" required="required" data-error="Se requiere en nombre de la prenda">
+							<input id="search_form_category" class="input_field search_form_category" type="text" placeholder="Tipo de prenda">
+							<input id="search_form_degree" class="input_field search_form_degree" type="text" placeholder="Hombre o Dama">
+							<button id="search_submit_button" type="submit" class="search_submit_button trans_200" value="Submit">Buscar prenda </button>
+						</form>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Services -->
+<div class="services page_section">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="section_title text-center">
+					<h1>Otros Beneficios Que Ofrecemos</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row services_row">
+			<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+				<div class="icon_container d-flex flex-column justify-content-end">
+					<img src="{{url_for('static', filename='images/carro.svg')}}" alt="">
+				</div>
+				<h3>Envios a domicilio</h3>
+				<p>El envío es gratuito si tu compra es mayor de $1000 M.N + IVA dentro de méxico</p>
+			</div>
+			<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+				<div class="icon_container d-flex flex-column justify-content-end">
+					<img src="{{url_for('static', filename='images/home.svg')}}" alt="">
+				</div>
+				<h3>Tu paquete llega hasta la puerta de su casa</h3>
+				<p>Garantizamos que su compra llegará hasta la puerta de su hogar</p>
+			</div>
+			<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+				<div class="icon_container d-flex flex-column justify-content-end">
+					<img src="{{url_for('static', filename='images/sorpresa.svg')}}" alt="">
+				</div>
+				<h3>Envios sorpresa</h3>
+				<p>En la compra de arriba de $1000 M.N, aparte del envío gratis, se le envía un regalo sorpresa</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Testimonials -->
+<div class="testimonials page_section">
+	<!-- <div class="testimonials_background" style="background-image:url(images/testimonials_background.jpg)"></div> -->
+	<div class="testimonials_background_container prlx_parent">
+		<div class="testimonials_background prlx" style="background-image: url({{url_for('static', filename='images/fash.png')}})"></div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="section_title text-center">
+					<h1>Lo que dicen nuestros clientes</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-10 offset-lg-1">
+				<div class="testimonials_slider_container">
+					<!-- Testimonials Slider -->
+					<div class="owl-carousel owl-theme testimonials_slider">				
+						<!-- Testimonials Item -->
+						<div class="owl-item">
+							<div class="testimonials_item text-center">
+								<div class="quote">“</div>
+								<p class="testimonials_text">Excelente servicio, mi compra llego en excelentes condiciones y hasta la puerta de mi casa.</p>
+								<div class="testimonial_user">
+									<div class="testimonial_image mx-auto">
+										<img src="{{url_for('static', filename='images/mujer-sonriendo.jpg')}}" alt="">
+									</div>
+									<div class="testimonial_name">Elizabeth Gomez</div>
+									<div class="testimonial_title">Cliente</div>
+								</div>
+							</div>
+						</div>
+						<!-- Testimonials Item -->
+						<div class="owl-item">
+							<div class="testimonials_item text-center">
+								<div class="quote">“</div>
+								<p class="testimonials_text"> Mi paquete llego en el tiempo acordado y en buenas condiciones </p>
+									<div class="testimonial_image mx-auto">
+										<img src="{{url_for('static', filename='images/teacher_2.jpg')}}" alt="">
+									</div>
+									<div class="testimonial_name">Jaime Peréz</div>
+									<div class="testimonial_title">cliente</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Events -->
+<div class="events page_section">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="section_title text-center">
+					<h1>Proximos Eventos</h1>
+				</div>
+			</div>
+		</div>
+		<div class="event_items">
+			<!-- Event Item -->
+			<div class="row event_item">
+				<div class="col">
+					<div class="row d-flex flex-row align-items-end">
+						<div class="col-lg-2 order-lg-1 order-2">
+							<div class="event_date d-flex flex-column align-items-center justify-content-center">
+								<div class="event_day">03</div>
+								<div class="event_month">Octubre</div>
+							</div>
+						</div>
+						<div class="col-lg-4 order-lg-2 order-3">
+							<div class="event_content">
+								<div class="event_name"><a class="trans_200" href="#">GIVEAWAY</a></div>
+								<div class="event_location">Autumn</div>
+								<p>Será el sorteo de un sueter de la nueva coleccion de Autumn</p>
+							</div>
+						</div>
+						<div class="col-lg-3 order-lg-2 order-2">
+							<div class="event_image">
+								<img src="{{url_for('static', filename='images/sueter.jpg')}}" alt="">
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<!-- Event Item -->
+			<div class="row event_item">
+				<div class="col">
+					<div class="row d-flex flex-row align-items-end">
+						<div class="col-lg-6 order-lg-2 order-2">
+							<div class="event_date d-flex flex-column align-items-center justify-content-center">
+								<div class="event_day">07</div>
+								<div class="event_month">Octubre</div>
+							</div>
+						</div>
+						<div class="col-lg-6 order-lg-2 order-3">
+							<div class="event_content">
+								<div class="event_name"><a class="trans_200" href="#">Presentación de nuevas coleciones</a></div>
+								<div class="event_location">Tienda Fisica</div>
+								<p>El evento será de gran importancia ya que los diseñadores motran sus nuevas colecciones.</p>
+								<div class="col-lg-8 order-lg-2 order-2">
+									<div class="event_image">
+										<img src="{{url_for('static', filename='images/pasarela1.jpg')}}" alt="">
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock%}

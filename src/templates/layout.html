@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>FASHION STORE</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Course Project">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/bootstrap4/bootstrap.min.css')}}">
+		<link href="{{url_for('static', filename='style/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/plugins/OwlCarousel2-2.2.1/animate.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/main_styles.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/responsive.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/courses_styles.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/courses_responsive.css')}}">
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header d-flex flex-row">
+			<div class="header_content d-flex flex-row align-items-center">
+				<!-- Logo -->
+					<div class="logo">
+						<img src="" alt="">
+						<span>Fashion Store</span>
+					</div>
+				<!-- Main Navigation -->
+				<nav class="main_nav_container">
+					<div class="main_nav">
+						<ul class="main_nav_list">
+							<li class="main_nav_item"><a href="/">Inicio</a></li>
+							<li class="main_nav_item"><a href="/dama">Dama</a></li>
+							<li class="main_nav_item"><a href="/rebajas">+ Rebajas</a></li>
+							<li class="main_nav_item"><a href="/contacto">contacto</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="header_side d-flex flex-row justify-content-center align-items-center">	
+				<a style="color: black;" href="/user"><img src="{{url_for('static', filename='images/fi-rr-user.svg')}}"></a>
+				<span><a style="color: black;" href="/logout">Cerrar Sesión</a></span>
+			</div>
+			<!-- Hamburger -->
+			<div class="hamburger_container">
+				<i class="fas fa-bars trans_200"></i>
+			</div>
+		</header>
+		<!-- Menu -->
+		<div class="menu_container menu_mm">
+			<!-- Menu Close Button -->
+			<div class="menu_close_container">
+				<div class="menu_close"></div>
+			</div>
+			<!-- Menu Items -->
+			<div class="menu_inner menu_mm">
+				<div class="menu menu_mm">
+					<ul class="menu_list menu_mm">
+						<li class="menu_item menu_mm"><a href="/">Inicio</a></li>
+						<li class="menu_item menu_mm"><a href="/dama">Dama</a></li>
+						<li class="menu_item menu_mm"><a href="/rebajas">+ Rebajas</a></li>
+						<li class="menu_item menu_mm"><a href="/contacto">contacto</a></li>
+						<li class="menu_item menu_mm">
+							<div class="d-flex flex-row justify-content-center">
+								<span><a style="color: black;" href="/logout">Cerrar Sesión</a></span>
+							</div>
+						</li>
+					</ul>
+					<!-- Menu Social -->
+					<div class="menu_social_container menu_mm">
+						<ul class="menu_social menu_mm">
+							<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+							<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+							<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
+							<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+						</ul>
+					</div>
+					<div class="menu_copyright menu_mm">FashionStore All rights reserved</div>
+				</div>
+			</div>
+		</div>
+        {% block content %}
+
+        {% endblock %}
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<!-- Newsletter -->
+			<div class="newsletter">
+				<div class="row">
+					<div class="col">
+						<div class="section_title text-center">
+							<h1>Suscribete a nuestra pagina, para recibir nuestras mejores ofertas</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col text-center">
+						<div class="newsletter_form_container mx-auto">
+							<form action="post">
+								<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
+									<input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
+									<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribirse</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer Content -->
+			<div class="footer_content">
+				<div class="row">
+					<!-- Footer Column - About -->
+					<div class="col-lg-3 footer_col">
+						<!-- Logo -->
+						<div class="logo_container">
+							<div class="logo">
+								<img src="" alt="">
+								<span>FASHION STORE</span>
+							</div>
+						</div>
+						<p class="footer_about_text"> </p>
+					</div>
+					<!-- Footer Column - Menu -->
+					<div class="col-lg-3 footer_col">
+						<div class="footer_column_title">Contenido
+						</div>
+						<div class="footer_column_content">
+							<ul>
+								<li class="footer_list_item"><a href="#">Ofertas</a></li>
+								<li class="footer_list_item"><a href="/dama">Dama</a></li>
+								<li class="footer_list_item"><a href="/rebajas">+Rebajas</a></li>
+								<li class="footer_list_item"><a href="/contacto">contacto</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 footer_col">
+						<div class="footer_column_title">Contacto</div>
+						<div class="footer_column_content">
+							<ul>
+								<li class="footer_contact_item">
+									<div class="footer_contact_icon">
+										<img src="{{url_for('static', filename='images/placeholder.svg')}}" alt="https://www.flaticon.com/authors/lucy-g">
+									</div>
+									Lomas de san luis, 256, San luis potosi
+								</li>
+								<li class="footer_contact_item">
+									<div class="footer_contact_icon">
+										<img src="{{url_for('static', filename='images/smartphone.svg')}}" alt="https://www.flaticon.com/authors/lucy-g">
+									</div>
+									+42 578 902 902
+								</li>
+								<li class="footer_contact_item">
+									<div class="footer_contact_icon">
+										<img src="{{url_for('static', filename='images/envelope.svg')}}" alt="https://www.flaticon.com/authors/lucy-g">
+									</div>FashionStore@gmail.com
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer Copyright -->
+			<div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
+				<div class="footer_copyright">
+					<span>Fashion Store All rights reserved</span>
+				</div>
+				<div class="footer_social ml-sm-auto">
+					<ul class="menu_social">
+						<li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+						<li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+						<li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+						<li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						<li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="{{url_for('static',filename='js/jquery-3.2.1.min.js')}}"></script>
+	<script src="{{url_for('static',filename='style/bootstrap4/popper.js')}}"></script>
+	<script src="{{url_for('static',filename='style/bootstrap4/bootstrap.min.js')}}"></script>
+	<script src="{{url_for('static',filename='js/plugins/greensock/TweenMax.min.js')}}"></script>
+	<script src="{{url_for('static',filename='js/plugins/greensock/TimelineMax.min.js')}}"></script>
+	<script src="{{url_for('static',filename='js/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
+	<script src="{{url_for('static',filename='js/plugins/greensock/animation.gsap.min.js')}}"></script>
+	<script src="{{url_for('static',filename='js/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
+	<script src="{{url_for('static',filename='js/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+	<script src="{{url_for('static',filename='js/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
+	<script src="{{url_for('static',filename='js/plugins/easing/easing.js')}}"></script>
+	<script src="{{url_for('static',filename='js/custom.js')}}"></script>
+	</body>
+</html>
