@@ -9,12 +9,11 @@ app.secret_key = 'mysecretkey'
 
 db = SQLAlchemy(app)
 
-
 class Cliente(db.Model):
     idCliente= db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(80))
-    email = db.Column(db.String(120), unique=True)
-    password = db.Column(db.String(80))
+    email = db.Column(db.String(100), unique=True)
+    password = db.Column(db.String(140))
     direccion = db.Column(db.String(80))
 
 db.create_all()
@@ -46,6 +45,7 @@ def login():
             email = request.form['email']
             cliente = Cliente.query.filter_by(email=email).first()
             if cliente:
+                db.session.add(cliente)
                 if werkzeug.security.check_password_hash(cliente.password, request.form['password']):
                     session['logged_in'] = True
                     flash('Bienvenido!')
@@ -70,6 +70,15 @@ def registro():
             db.session.commit()
             flash('Usuario registrado con exito')
             return render_template('login.html')
+            if Cliente.query.filter_by(email=email).first():
+                error = 'Este email ya esta registrado!'
+                return render_template('registro.html', error=error)
+            else:
+                cliente = Cliente(nombre="empty", email=email, password=werkzeug.security.generate_password_hash(request.form['password'], method='sha256'), direccion="empty")
+                db.session.add(cliente)
+                db.session.commit()
+                flash('Usuario registrado con exito')
+                return render_template('login.html')
         return render_template('registro.html')
 
 @app.route('/logout')

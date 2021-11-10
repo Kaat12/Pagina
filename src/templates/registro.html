@@ -48,8 +48,13 @@
 									</div>
 									<div class="form-group mb-3">
 										<label class="label" for="password">Confirmar contraseña</label>
-										<input type="password" class="form-control" placeholder="psswdconfirm" required name="password">
+										<input type="password" class="form-control" placeholder="password" required name="password">
 									</div>
+									{% if error %}
+										<div class="alert alert-danger" role="alert">
+											{{error}}
+										</div>
+									{%endif%}
 									<div class="form-group">
 										<button type="submit" class="form-control btn btn-primary rounded submit px-3">Registrarme</button>
 									</div>
