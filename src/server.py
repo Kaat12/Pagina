@@ -48,7 +48,6 @@ def login():
                 db.session.add(cliente)
                 if werkzeug.security.check_password_hash(cliente.password, request.form['password']):
                     session['logged_in'] = True
-                    flash('Bienvenido!')
                     return redirect(url_for('index'))
                 error = 'Contraseña incorrecta'
                 return render_template('login.html', error=error)
@@ -64,18 +63,11 @@ def registro():
     else:
         if request.method == 'POST':
             email = request.form['email']
-            hashed_psswd = werkzeug.security.generate_password_hash(request.form['password'], method='sha256')
-            cliente = Cliente(nombre="empty", email=email, password=hashed_psswd, direccion="empty")
-            db.session.add(cliente)
-            db.session.commit()
-            flash('Usuario registrado con exito')
-            return render_template('login.html')
             if Cliente.query.filter_by(email=email).first():
                 error = 'Este email ya esta registrado!'
                 return render_template('registro.html', error=error)
             else:
-                cliente = Cliente(nombre="empty", email=email, password=werkzeug.security.generate_password_hash(request.form['password'], method='sha256'), direccion="empty")
-                db.session.add(cliente)
+                db.session.add(Cliente(nombre="empty", email=email, password=werkzeug.security.generate_password_hash(request.form['password'], method='sha256'), direccion="empty"))
                 db.session.commit()
                 flash('Usuario registrado con exito')
                 return render_template('login.html')
