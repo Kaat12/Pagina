@@ -20,7 +20,7 @@
                 <div class="contact_form">
                     <div class="contact_title">Contactanos</div>
                     <div class="contact_form_container">
-                        <form action="post">
+                        <form action="POST">
                             <input id="contact_form_name" class="input_field contact_form_name" type="text" placeholder="Nombre" required="required" data-error="Nombre es requerido.">
                             <input id="contact_form_email" class="input_field contact_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
                             <textarea id="contact_form_message" class="text_field contact_form_message" name="message" placeholder="Mensaje" required="required" data-error="Por favor escribir mensaje"></textarea>
@@ -71,4 +71,10 @@
         </div>
     </div>
 </div>
+<script type= "php">
+    <?php
+        $mensaje = $_POST['message'];
+        echo $mensaje;
+    ?>
+</script>
 {%endblock%}
