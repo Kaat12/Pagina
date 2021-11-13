@@ -32,7 +32,7 @@ def dama():
 def rebajas():
     return render_template('rebajas.html')
 
-@app.route('/contacto')
+@app.route('/contacto', methods=['GET', 'POST'])
 def contacto():
     return render_template('contacto.html')
 #-----------CONTROL DE SESION Y CREACION DE USUARIOS-----------------------------------------------------------------------------------------
