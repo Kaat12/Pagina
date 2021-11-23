@@ -73,10 +73,21 @@ def registro():
                 return render_template('login.html')
         return render_template('registro.html')
 
+
 @app.route('/logout')
 def logout():
     session['logged_in'] = False
     return redirect(url_for('login'))
 
+#-------------------codigo para PWA---------------------------
+@app.route('/offline')
+def offline():
+    return app.send_static_file('offline.html')
+
+@app.route('/serviceWorker.js')
+def sw():
+    return app.send_static_file('serviceWorker.js')
+
+#-------------------inicializar servidor------------------------------
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

@@ -15,6 +15,14 @@
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/responsive.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/courses_styles.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/courses_responsive.css')}}">
+
+		<meta name = "theme-color" content = "#F0DB4F">
+		<meta name = "MobileOptimized" content = "width">
+		<meta name = "HandheldFriendly" content = "true">
+		<meta name = "apple-mobile-web-app-capable" content = "yes">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black-translucent">
+		<meta name = "apple-mobile-web-app-title" content = "Fashion Store">
+		<link rel="manifest" href="{{url_for('static', filename='/manifest.json')}}">
 	</head>
 	<body>
 				<!--Idioma-->
@@ -200,5 +208,6 @@ function googleTranslateElementInit() {
 	<script src="{{url_for('static',filename='js/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
 	<script src="{{url_for('static',filename='js/plugins/easing/easing.js')}}"></script>
 	<script src="{{url_for('static',filename='js/custom.js')}}"></script>
+	<script src="{{url_for('static',filename='app.js')}}"></script>
 	</body>
 </html>
