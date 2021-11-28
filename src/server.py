@@ -5,6 +5,7 @@ import werkzeug.security
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/bd_ventas'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SESSION_COOKIE_NAME'] = "SESSION_DATA"
 app.secret_key = 'mysecretkey'
 
 db = SQLAlchemy(app)
