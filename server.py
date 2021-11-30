@@ -19,6 +19,10 @@ class Cliente(db.Model):
 
 db.create_all()
 #RUTAS DEl WEB APP---------------------------------------------------------------------------------------------------------
+@app.route('/carrito')
+def carrito():
+    return render_template('carrito.html')
+
 @app.route('/')
 def index():
     if session.get('logged_in'):
@@ -91,4 +95,4 @@ def sw():
 
 #-------------------inicializar servidor------------------------------
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
